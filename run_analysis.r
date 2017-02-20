@@ -54,4 +54,4 @@ ds = ds[,measvect]
 ## Create tidy dataset with averages
 tds = aggregate(ds[,3:81], list(ds$subject,ds$activity), mean)
 colnames(tds) = colnames(ds)
-write.table(tds, file="./data/aggregated_results.txt")
+write.table(tds, file="./data/aggregated_results.txt", row.names = FALSE)
